@@ -3,9 +3,9 @@ checkpoints/
 results/
 result/
 build/
-*.pth
-*/*.pth
-*/*/*.pth
+# *.pth
+# */*.pth
+# */*/*.pth
 torch.egg-info/
 */*.pyc
 */**/*.pyc
