@@ -23,10 +23,10 @@ class ChangeDetectionDataset(BaseDataset):
         self.istest = False
         if opt.phase == 'test':
             self.istest = True
-        self.A_paths = sorted(make_dataset(os.path.join(opt.dataroot, folder_A), opt.max_dataset_size))
-        self.B_paths = sorted(make_dataset(os.path.join(opt.dataroot, folder_B), opt.max_dataset_size))
+        self.A_paths = sorted(make_dataset(os.path.join(opt.dataroot, 'train', folder_A), opt.max_dataset_size))
+        self.B_paths = sorted(make_dataset(os.path.join(opt.dataroot, 'train', folder_B), opt.max_dataset_size))
         if not self.istest:
-            self.L_paths = sorted(make_dataset(os.path.join(opt.dataroot, folder_L), opt.max_dataset_size))
+            self.L_paths = sorted(make_dataset(os.path.join(opt.dataroot,'train', folder_L), opt.max_dataset_size))
 
         print(self.A_paths)
 
